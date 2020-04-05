@@ -1,0 +1,171 @@
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin-bottom: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.header{
+    background-color: #1d1e20;
+    display: flex;
+    flex-wrap: wrap; /* quando a tela for pequena ele joga para baixo aninhando o conteudo*/
+    justify-content: space-between;
+    align-items: center; /* alinha na vertical*/
+    padding: 20px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+/* CSS FLEXBOX 1*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px; /* tamanho maximo do container que segura as divs neste caso*/
+    margin: 0 auto; /* vai alinhar ao centro quando passar do valor de max-width;*/
+}
+
+.flex > div{
+    flex: 1  1 200px;
+    margin: 10px;
+}
+
+/* CSS GRID 1*/
+.grid{
+    display: grid;
+    max-width: 800px; /* tamanho maximo do container que segura as divs neste caso*/
+    padding: 10px; /* para nao deixar os itens grudarem*/
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid1{
+    grid-template-columns: repeat(3, 1fr); /* 1fr= uma unidade fracional neste caso esta dividindo 100% em 3*/
+}
+
+/* a partir do 4 item sera aplicado este estilo*/
+.grid1 > div:nth-child(n + 4){
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.grid1 > div.anuncio {
+    grid-column: 1; /* posiciona na primeira coluna*/
+    grid-row: 2 / 5; /* posiciona da linha 2 ate a 5*/
+    display: block;
+    background: tomato;
+}
+
+@media (max-width: 600px){
+
+    .grid1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* coloca em display block e as opcoes de display grid nao serao aplicadas*/
+    .grid1 > div:nth-child(n + 4){
+        display: block; 
+    }
+
+    .grid1 > div.anuncio {
+        grid-column: auto; 
+        grid-row:auto;
+        order: -1; /* coloca o anuncio na primeira pocissao*/
+    }
+}
+
+
+/* CSS GRID 2*/
+.grid2{
+    grid-template-columns: 1fr 200px; /* 1fr= uma unidade fracional neste caso esta dividindo 100% em 3*/  
+}
+
+.sidebar > div{
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px){
+
+    .grid2{
+        grid-template-columns:  1fr;
+    }
+
+    /* coloca em display block e as opcoes de display grid nao serao aplicadas*/
+    .sidebar {
+        display: flex; 
+        overflow: scroll; /* cria um scroll automaticamente*/
+    }
+
+    .sidebar > div{
+        flex: 1 0 200px;  /* mantem as divs do side bar com o tamanho de 200px*/
+        margin: 10px;
+    }
+}
+
+/* CSS GRID 3*/
+.grid3{
+    grid-template-columns: repeat(2, 1fr); /* 1fr= uma unidade fracional neste caso esta dividindo 100% em 2*/  
+}
+
+.grid3-item:nth-child(1){
+    grid-row: 1/3;   
+}
+
+.grid3-item {
+    display: grid;
+    align-self: end; /* para sem alinhar na parte de baixo*/
+}
+
+.grid3-item  img{
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+.grid3-item  p{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+@media (max-width: 600px){
+
+    .grid3{
+        grid-template-columns:  1fr;
+    }
+}
