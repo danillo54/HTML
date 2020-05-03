@@ -1,0 +1,26 @@
+body{
+    color:gray;
+}
+
+/*
+    box-sizing: border-box;
+    define o tamanho do box-model igual ao width e height.
+    Quando nao definimos essa propriedade o box-model
+    sera igual a soma do width e height + os valores de 
+    padding e border
+*/
+
+h1{
+    margin: 20px;
+    border: 10px solid rebeccapurple;
+    padding: 10px;
+    text-align: center;
+
+    height: 100px;
+    width: 100px;
+
+    box-shadow: 100px 0px 0px 0px #d1a9f9
+    , 0 100px green, 100px 100px yellow;
+
+    box-sizing: border-box;
+}

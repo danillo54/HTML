@@ -1,0 +1,19 @@
+/* STYLES */
+body {
+  background: pink;
+  color: white;
+  font-size: 18px;
+}
+
+/* LAYOUTS */
+#header {
+  border: solid 1px black;
+  padding: 40px;
+}
+
+/* MODULES */
+.widget {
+  border-radius: 100%;
+  border: dashed 4px #333;
+}
+/*# sourceMappingURL=app.css.map */

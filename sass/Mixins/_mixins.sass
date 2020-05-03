@@ -1,0 +1,16 @@
+// GLOBAL MIXINS
+
+=box($radios, $shadowColour, $gradientColour1, $gradientColour2)
+ -webkit-border-radius: $radios
+ -moz-border-radius: $radios
+ border-radius: $radios
+
+ -webkit-box-shadow: 0 5px 10px $shadowColour
+ -moz-box-shadow: 0 5px 10px $shadowColour
+ box-shadow: 0 5px 10px $shadowColour
+
+ background: #036 //SE O BROWSER NAO SUPORTAR GRADIENTE USA ESTE
+ background: -webkit-linear-gradient($gradientColour1,  $gradientColour2)
+ background: -moz-linear-gradient($gradientColour1,  $gradientColour2)
+ background: -o-linear-gradient($gradientColour1,  $gradientColour2)
+ background: linear-gradient($gradientColour1,  $gradientColour2)

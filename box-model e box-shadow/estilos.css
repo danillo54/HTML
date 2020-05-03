@@ -1,0 +1,16 @@
+body{
+    color:gray;
+}
+
+h1{
+    margin: 20px;
+    border: 10px solid rebeccapurple;
+    padding: 10px;
+    text-align: center;
+
+    height: 100px;
+    width: 100px;
+
+    box-shadow: 128px 0px 0px 0px #d1a9f9
+    , 0 128px green, 128px 128px yellow;
+}

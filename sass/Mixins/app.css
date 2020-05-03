@@ -1,0 +1,66 @@
+/* STYLES */
+body {
+  font-family: Georgia, Times, serif;
+  background: pink;
+  color: #333;
+  font-size: 18px;
+}
+
+/* LAYOUTS */
+#header {
+  border: solid 1px black;
+  padding: 40px;
+}
+
+.container {
+  width: 768px;
+  margin: 0 auto;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: white;
+}
+
+/* MODULES */
+.box {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.box1 {
+  border-radius: 100%;
+  -webkit-box-shadow: 0 5px 10px #555;
+  box-shadow: 0 5px 10px #555;
+  background: #036;
+  background: -webkit-gradient(linear, left top, left bottom, from(orangered), to(tomato));
+  background: linear-gradient(orangered, tomato);
+}
+
+.box2 {
+  border-radius: 80%;
+  -webkit-box-shadow: 0 5px 10px #9b7e7e;
+  box-shadow: 0 5px 10px #9b7e7e;
+  background: #036;
+  background: -webkit-gradient(linear, left top, left bottom, from(tomato), to(yellow));
+  background: linear-gradient(tomato, yellow);
+}
+
+.box3 {
+  border-radius: 60%;
+  -webkit-box-shadow: 0 5px 10px #eb7272;
+  box-shadow: 0 5px 10px #eb7272;
+  background: #036;
+  background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(orangered));
+  background: linear-gradient(yellow, orangered);
+}
+
+.box4 {
+  border-radius: 40%;
+  -webkit-box-shadow: 0 5px 10px #234b96;
+  box-shadow: 0 5px 10px #234b96;
+  background: #036;
+  background: -webkit-gradient(linear, left top, left bottom, from(green), to(yellow));
+  background: linear-gradient(green, yellow);
+}
+/*# sourceMappingURL=app.css.map */
